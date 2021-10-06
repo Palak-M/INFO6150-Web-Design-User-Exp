@@ -1,0 +1,61 @@
+#homepage{
+ display: grid;
+ grid-template-columns: 20% 1fr;
+ grid-template-rows: auto 1fr auto;
+ grid-template-areas: 
+   "header header"
+   "local-menu main"
+   "footer footer";
+ }
+
+header{
+ grid-area: header;
+ background-color: plum;
+}
+
+header a{
+ padding:1rem;
+}
+
+header ul{
+ display: flex;
+ list-style-type: none;
+ justify-content: space-around;
+} 
+
+header a:hover{
+ background-color: rebeccapurple;
+ color:white;
+ width:100%; 
+}
+
+.local-menu{
+grid-area:local-menu;
+background-color: pink;
+border-right:0.05rem solid black;
+padding:1rem;
+}
+
+.local-menu li{
+ display:flex;
+ list-style-type: none;
+ padding:1rem;
+ width:100%;
+}
+
+.local-menu a:hover{
+ background-color: plum;
+ width:100%;
+ }
+
+main{
+ grid-area:main;
+ background-color: pink;
+ padding:0.5rem;
+}
+
+footer{
+ grid-area: footer;
+ background-color: plum;
+ padding:1rem;
+}  
