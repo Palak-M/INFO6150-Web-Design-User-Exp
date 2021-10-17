@@ -1,12 +1,9 @@
 *{
  box-sizing:border-box;
+ font-family: sans-serif;
 }
-@media(min-width:600px){
- main{
-  display: flex;
-  flex-direction: row;
-  font-family: sans-serif;
- }
+.main-header{
+  font-size:large;
 }
 .info{
  padding:0 0.2rem;
@@ -27,15 +24,26 @@
  display: flex;
  flex-direction: row; 
  justify-content: space-between;
- 
+ padding:0.2rem;
 }
 .label__input{
- margin:0.07rem; 
+ margin-left:0.3rem; 
   width: 100%;
 }
 
 .add-form__submit{
-  margin:0.07rem;
+  margin:0.3rem 0;
   width: 100%;
  box-sizing: border-box;
+}
+@media (min-width:600px){
+  
+ main{
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+ }
+ .main-header{
+  font-size:2rem;
+ }
 }
