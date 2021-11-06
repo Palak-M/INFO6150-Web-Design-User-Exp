@@ -1,0 +1,310 @@
+*{
+ box-sizing: border-box;
+}
+
+/*Designed the layout of website in grid format. In the header, we have logo on the left and main title, subheader on the right followed by menubar. In the main we have content. And footer is in the bottom  */
+body{
+ display: grid;
+ grid-template-rows: "auto 1fr auto";
+ grid-template-columns: "auto 1fr";
+ grid-template-areas:
+ "header header"
+ "main main"
+ "footer footer";
+ font-family:cursive;
+ margin:0;
+}
+
+/*For background picture, used linear gradient for fading purpose so that text is visible*/
+body{
+  background:
+  linear-gradient(
+   rgba(0,0,0,0.6),
+   rgba(0,0,0,0.6)),
+    url('/images/bd-3.jpg');
+    background-size: cover;
+   }
+
+
+/*In header, used the grid format to have logo on the left(col1) and title(row1,col2),subheader(row2,col2)*/ 
+header{
+ grid-area: header;
+ display: grid;
+ grid-template-rows: "auto 1fr";
+ grid-auto-columns: "auto 1fr";
+ grid-template-areas: 
+ "logo header"
+ "logo subheader"
+ "menubar menubar";
+}
+
+/*Below are the properties for logo, title and subheader*/
+/*For logo,provided the width and height*/
+header .logo{
+  grid-area: logo;
+  width:7rem;
+  height:auto;
+  }
+
+/*Set the font related,alignment/position properties for title*/  
+header h1{
+ grid-area: header;
+ margin:0.4rem;
+ text-align:left;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 3.3rem;
+ color:rgb(2, 59, 2);
+}
+
+/*Set the font related properties for subheader*/  
+header .subheader{
+ grid-area: subheader;
+ margin-left:12rem;
+ font-family:cursive; 
+ color:#fdfcdc;
+ }
+
+ /*Below are the properties for menubar and sub-menubar*/
+ /*Removed the bullets from all the unordered list values*/
+header ul{
+  padding:0rem;
+  margin:0rem;
+  list-style-type: none; 
+}
+
+/*In nav,provided color-related properties and spreaded the button names equally over the menubar*/
+header nav{
+ background-color: rgb(103, 133, 103);
+ color:#fdfcdc;
+ justify-content: space-around;
+ width:100%;
+}
+
+/*Displayed the button in flex format alongwith font and color-related properties*/
+header button{
+ display: flex;
+ color:#fdfcdc;
+ font-size:medium;
+ border-style: none;
+ }
+
+ 
+/*Set the margin properties for menubar*/
+.menubar{
+ grid-area: menubar;
+ margin-top:1rem;
+ margin-left:0rem;
+ }
+
+ /*Display-property for menubar that is the text in the menubar is placed in a line*/
+ .menubar > ul{
+ display: flex;
+ flex-direction: row;
+ }
+
+/*Position-related property for menu*/
+.menu > li{
+/*padding:0 1rem;*/
+width: 100%;
+position: relative;
+padding-left:1rem;
+/* text-decoration: none; */
+}
+
+/*Box-model and display property for buttons in menu*/
+.menu button{
+  display: flex;
+  width:auto;
+  padding:0.5rem;
+  border: 0;
+  font:inherit;
+  background-color:transparent; 
+}
+
+
+.menu a{
+  text-decoration: none;
+}
+
+/*Hover property for menu */
+ .menu button:hover{
+   box-sizing: border-box;
+   background-color:rgb(3, 102, 3);
+ } 
+
+ /*Focus-within and hover property used for menu and submenu*/
+ .menu > li:focus-within .submenu, .menu > li:hover .submenu{
+  box-sizing: border-box;
+  max-height: 90vh;
+  visibility: visible;
+  padding-top:0rem;
+  background-color:rgb(1, 90, 1);
+ }
+
+/*For Submenu: Display-related(column wise direction given for drop down), position-related and transition properties are provided*/
+.submenu{
+ display: flex;
+ flex-direction: column;
+ position: absolute;
+ left:0rem;
+ top: 2.4rem;
+ max-height:0;
+ overflow: hidden;
+ background-color:green;
+ transition:max-height 0.5s;
+}
+
+/*For text in the submenu, display and color-related properties are provided*/
+.submenu a{
+ display: inline-block;
+ width:100%;
+ padding:0;
+ color:black;
+ text-decoration: none;
+}
+
+/*Hover property provided for submenu*/
+.submenu a:hover{
+ box-sizing: border-box;
+ color:#fdfcdc;
+ background-color:rgb(40, 150, 40);
+}
+
+/*For main, Grid item's size, location, Box-model and color property are provided*/
+main{
+ grid-area: main;
+ padding:0.05rem;
+ color:#fdfcdc;
+ }
+
+h2, h3{
+   color:rgb(0, 44, 0);
+ }
+
+ div{
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+ }
+
+ div > p{
+margin-bottom:0;
+margin:0;
+color: black;
+ }
+ 
+ footer a{
+   color: black;
+ }
+
+ section > p{
+   margin:0;
+ }
+
+ img{
+   width:8rem;
+   height: auto;
+ }
+
+/*For footer,Grid item's size, location are provided*/ 
+footer{
+ grid-area: footer;
+ position: fixed;
+ margin:0;
+ padding:0;
+ bottom:0;
+ right:0;
+ color: #fdfcdc;
+}
+
+
+@media only screen and (max-width:765px) {
+  footer {
+    position: static;
+    right: unset;
+    bottom: unset;
+    padding-left: 10px;
+  }
+
+  header h1{
+    font-size: medium;
+  }
+  .subheader {
+    margin-left: 0 !important;
+    font-size:xx-small;
+  }
+
+  .submenu{
+    top: 2.8rem !important;
+   }
+
+ }
+
+ 
+ @media only screen and (min-width:766px) and (max-width:1007px) {
+  footer {
+    position: static;
+    right: unset;
+    bottom: unset;
+    padding-left: 10px;
+  }
+
+  header h1{
+    font-size: medium;
+  }
+
+  .submenu{
+   top: 1.4rem !important;
+  }
+
+  .subheader {
+    margin-left: 0 !important;
+    font-size:xx-small;
+  }
+
+  .menu button {
+    padding: unset;
+  }
+
+  .menu li:hover{
+    box-sizing: border-box;
+   background-color:rgb(1, 90, 1);;
+  } 
+
+  
+ }
+
+ 
+ @media only screen and (max-width:1024px) {
+  footer {
+    position: static;
+    right: unset;
+    bottom: unset;
+    padding-left: 10px;
+  }
+
+  header h1{
+    font-size: medium;
+  }
+
+  .submenu{
+   top: 1.4rem;
+  }
+
+  .subheader {
+    margin-left: 0 !important;
+    font-size:xx-small;
+  }
+
+  .menu button {
+    padding: unset;
+  }
+
+  .menu li:hover{
+    box-sizing: border-box;
+   background-color:rgb(1, 90, 1);;
+  } 
+
+  
+ }
+
+ 
