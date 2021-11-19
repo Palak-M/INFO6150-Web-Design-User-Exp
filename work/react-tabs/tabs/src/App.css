@@ -1,0 +1,105 @@
+h1{
+  text-align: center;
+  margin-top:2rem;
+  font-family:sans-serif;
+  
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+ }
+
+body {
+  background:rgb(149, 226, 231);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 40rem;
+  height: 16rem;
+  background:rgb(219,112,147);
+  margin: 6.25rem auto 0;
+  word-break: break-all;
+  border: 0.063rem solid rgba(0, 0, 0, 0.274);
+}
+
+.block-tabs {
+  display: flex;
+}
+
+.tabs:focus {
+  border-top: 0.3rem solid grey;
+}
+
+.tabs {
+  padding: 0.938rem;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 0.063rem solid rgba(0, 0, 0, 0.274);
+  font-size: medium;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.tabs:not(:last-child){
+  border-right: 0.063rem solid rgba(0, 0, 0, 0.274);
+}
+
+.current-tabs  {
+  background: white;
+  border-bottom: 0.063rem solid transparent;
+}
+
+.current-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -0.313rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 0.125rem);
+  height: 0.313rem;
+  background: grey;
+}
+
+button {
+  border: none;
+  
+}
+
+.content-tabs {
+  flex-grow : 1;
+}
+
+.content {
+  background: white;
+  padding: 1.25rem;
+  width: 100%;
+  height: 100%;
+  display: none;
+  font-size: small;
+}
+
+.content p{
+  word-break: keep-all;
+  width: 100%;
+  height: 100%;
+}
+
+.current-content {
+  display: block;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
