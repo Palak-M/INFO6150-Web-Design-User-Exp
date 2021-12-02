@@ -24,14 +24,6 @@ header h1{
  margin-left: 0.2rem;
 }
 
-/* header{
- /* display: grid; */
- /* grid-template-columns: repeat(12,1fr); */
- /*gap: 0.5rem;
- width:100%;
- background-color: skyblue;
-} */
-
 header .header__logo{
  margin-left: 0.5rem;
  /* vertical-align:middle; */
@@ -70,7 +62,6 @@ main{
 
 .card__more{
  padding:0.25rem;
- /* margin:0 auto; */
  margin-top:auto;
  margin-left:auto;
  margin-right: auto;
@@ -87,9 +78,12 @@ main{
   background-color: skyblue;
   display: flex;
 }
+
+
 footer li {
   list-style-type: none;
 }
+
 footer ul li {
   position: relative;
   margin-left: 0;
@@ -98,11 +92,13 @@ footer ul li {
   bottom: 0;
   font-weight: bold;
 }
+
 .footer ul {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   padding: 0.25rem;
 }
+
 .footer__item {
   grid-column: span 4;
   list-style-type: none;
