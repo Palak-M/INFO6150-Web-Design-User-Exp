@@ -1,0 +1,136 @@
+  .carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+
+.carousel__slide-container { 
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+.carousel__slide { 
+  position: absolute;
+  visibility: hidden;
+}
+
+.carousel__slide--active { 
+  position: static;
+  visibility: visible;
+}
+
+.carousel__img { 
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 1.2rem;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+}
+
+.carousel__control { 
+  min-width: 54px;
+  min-height: 54px;
+  
+  color:black;
+  font-weight: bold;
+  font-weight: bold;
+  height: 100%;
+  width: 45px;
+  font-size: 25px;
+  text-align: center;
+  background-color: rgb(203, 209, 203);
+  font-family: sans-serif;
+  top:0;
+  z-index: 3;
+}
+
+
+@media screen and (max-width:360px) {
+  .carousel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    width:auto;
+  }
+  .carousel__img { 
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 1.2rem;
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    object-fit: contain;
+  }
+    
+  .carousel__slide-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: fit-content;
+   }
+  }
+
+
+  @media screen and (max-width:414px) {
+    .carousel {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      width:auto;
+    }
+    .carousel__img { 
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin-top: 1.2rem;
+      height: fit-content;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: fit-content;
+      object-fit: contain;
+    }
+      
+    .carousel__slide-container{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      height: fit-content;
+     }
+    }
+
+    @media screen and (max-width:1024px),(max-width:768px) {
+      .carousel {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        width:auto;
+      }
+      .carousel__img { 
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        margin-top: 1.2rem;
+        height: fit-content;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: fit-content;
+        object-fit: contain;
+      }
+        
+      .carousel__slide-container{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: fit-content;
+       }
+      }
+  
+

@@ -1,0 +1,109 @@
+:root{
+ /* --mainColor:rgb(248, 244, 244); */
+ --mainColor:white;
+}
+
+header{
+ background-color: var(--mainColor);
+}
+
+.skip_nav {
+  background: white;
+  height: 30px;
+  padding: 8px;
+  position: absolute;
+  transform: translateY(-250%);
+  transition: transform 0.3s;
+}
+.skip_nav:focus {
+  transform: translateY(0%);
+}
+
+.container{
+ width:95%;
+ margin: 0;
+ max-width: 1200px;
+ }
+
+.container-flex{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+
+ padding:10px;
+}
+
+.logo{
+ /* width:180px; */
+ /* height:150px; */
+ padding: 0;
+}
+
+.list{
+ display: flex;
+
+}
+
+.listItem{
+ margin-left: 2em;
+ color:black;
+ text-decoration: none;
+ font-size: 1.5rem;
+ font-family: 'Poppins', sans-serif;
+}
+
+.activeItem{
+ color:blue;
+ /* border-bottom: 0.2em double black; */
+}
+
+/* .icons{
+ color:#fff;
+ font-size: 1.5rem !important;
+ margin-right: 1em;
+ margin-left: 1.5em;
+} */
+
+@media screen and (max-width:1100px) {
+ /* .icons{
+   margin-left: 1em;
+ } */
+ 
+}
+
+@media screen and (max-width:768px) {
+html{
+ font-size: small;
+}
+
+/* .container{
+  font-size: small;
+} */
+.container-flex{
+ flex-direction: column;
+ font-size: small;
+}
+
+.logo{
+ width: 100px;
+}
+
+/* .icons{
+ margin:1em 1.5em;
+} */
+}
+
+@media screen and (max-width:568px){
+ html{
+  font-size: xx-small;
+ }
+ .list{
+  flex-direction: column;
+ }
+ .listItem{
+  margin-top: 0.2em;
+ }
+ .logo{
+  width: 80px;
+ }
+}

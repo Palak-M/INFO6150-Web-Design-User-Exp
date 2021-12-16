@@ -1,0 +1,222 @@
+.attractions{
+ /* width:100%; */
+ background-color: white;
+ /* margin: 0; */
+ display: flex;
+ justify-content: space-around;
+ 
+ min-height: 100%;
+ position: relative;
+ padding: 10px;
+ padding-bottom: -60px;
+ }
+
+h2{
+ text-align: center;
+ background-color: white;
+
+}
+
+.card{
+ width:25%;
+ text-align: center;
+ box-shadow: 0 0 3px black;
+ padding: 1em;
+}
+
+.attractImg{
+ /* width:280px;
+ height: 280px; */
+ object-fit:contain;
+}
+
+.loader{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+ @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+
+.fa fa-spinner fa-spin spinner{
+align-items: center;
+} 
+
+@media screen and (max-width:990px) {
+ .attractions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+ }
+
+ .card{
+  width:40%;
+  margin-bottom: 2em;
+  margin-right: 1em;
+  }
+
+  .attractImg{
+   /* width:180px; */
+   width:auto;
+   height:180px;
+   object-fit: contain;
+  }
+
+}
+
+
+@media screen and (max-width:768px){
+ .attractions{
+  flex-direction: column;
+ }
+
+ .card{
+  width:70%;
+  margin:1em;
+  }
+
+  .attractImg{
+    /* width:500px; */
+    height:100px;
+    width:auto;
+  object-fit:contain;}
+}
+
+@media screen and (max-width:540px){
+  .attractions{
+   flex-direction: column;
+  }
+ 
+  .card{
+   width:70%;
+   margin:1em;
+   }
+ 
+   .attractImg{
+     /* width:320px; */
+     height:210px;
+     width:auto;
+   object-fit:contain;}
+ }
+
+
+@media screen and (max-width:414px){
+  .attractions{
+   flex-direction: column;
+  }
+ 
+  .card{
+   width:70%;
+   margin:1em;
+   }
+ 
+   .attractImg{
+     /* width:230px; */
+     height:210px;
+     width:auto;
+   object-fit:contain;}
+ }
+
+@media screen and (max-width:411px){
+  .attractions{
+   flex-direction: column;
+  }
+ 
+  .card{
+   width:70%;
+   margin:1em;
+   }
+ 
+   .attractImg{
+     /* width:210px; */
+     height:210px;
+     width:auto;
+   object-fit:contain;}
+ }
+
+@media screen and (max-width:360px){
+  .attractions{
+   flex-direction: column;
+  }
+ 
+  .card{
+   width:70%;
+   margin:1em;
+   }
+ 
+   .attractImg{
+     width:auto;
+     height:80px;
+   object-fit:contain;}
+ }
+
+ @media screen and (max-width:320px){
+  .attractions{
+   flex-direction: column;
+  }
+ 
+  .card{
+   width:70%;
+   margin:1em;
+   }
+ 
+   .attractImg{
+     /* width:150px; */
+     height:150px;
+     width:auto;
+   object-fit:contain;}
+ }
+
+ @media screen and (max-width:280px){
+  .attractions{
+   flex-direction: column;
+  }
+ 
+  .card{
+   width:70%;
+   margin:1em;
+   }
+ 
+   .attractImg{
+     /* width:130px; */
+     width:auto;
+     height:150px;
+   object-fit:contain;}
+ }
